@@ -1,0 +1,23 @@
+mfs:
+  - dir: /opt/aws
+    entry:
+      - name: index.html
+      - name: script.js
+        path: script.js
+        comp: lzw
+      - name: style.css
+        comp: zlib
+      - name: lab-network.yaml
+        comp: gzip
+
+  - dir: /tmp
+    entry:
+      - name: gzip.txt
+        comp: gzip
+      - name: lzw.txt
+        comp: lzw
+      - name: zlib.txt
+        comp: zlib
+      - name: auto.txt
+        comp: auto
+
