@@ -31,11 +31,11 @@ var output_path string
 
 func init() {
 	flag.StringVar(&yaml_file, "yaml", "mfs.yaml", "yaml file defines which files to be compressed in mfs")
-	flag.StringVar(&output_path, "opath", "$CWD", "output path")
+	flag.StringVar(&output_path, "opath", "$PWD", "output path")
 
 	flag.Parse()
-	if output_path == "$CWD" {
-		output_path = os.Getenv("CWD")
+	if output_path == "$PWD" {
+		output_path = os.Getenv("PWD")
 	}
 }
 func prepare() *MFS {

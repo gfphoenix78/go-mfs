@@ -5,7 +5,7 @@ import (
 	"flag"
 	"fmt"
 	"io/ioutil"
-	"mfs"
+	mfs "github.com/gfphoenix78/go-mfs"
 	"os"
 )
 
@@ -13,7 +13,7 @@ var work_dir string
 var test_name string
 
 func init() {
-	flag.StringVar(&work_dir, "cwd", "$PWD", "directory")
+	flag.StringVar(&work_dir, "path", "$PWD", "directory")
 	flag.StringVar(&test_name, "test", "", "test name")
 	flag.Parse()
 
